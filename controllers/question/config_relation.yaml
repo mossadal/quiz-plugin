@@ -1,0 +1,11 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+answers:
+    label: Answers
+    emptyMessage: Add answers to the question here
+    list: @/plugins/mossadal/quiz/models/answer/columns.yaml
+    form: @/plugins/mossadal/quiz/models/answer/fields.yaml
+    view:
+        showCheckboxes: false

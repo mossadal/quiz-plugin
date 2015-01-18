@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    slug:
+        label: Short name
+        searchable: true
+    name:
+        label: Quiz title
+        searchable: true
+    description:
+        label: Short description of this particular quiz.
+        searchable: true
+    comment:
+        label: Comment to be displayed after the quiz is finished.
+        searchable: true
+    created_at:
+        label: Quiz created created_at
+        type: date
+        invisible: true
+    updated_at:
+        label: Quiz last updated at
+        type: date
+        invisible: true

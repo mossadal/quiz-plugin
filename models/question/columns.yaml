@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Question
+        searchable: true
+    quiz:
+        select: name
+        relation: quiz
+        label: Quiz
+        sortable: true

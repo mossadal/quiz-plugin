@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    question:
+        label: Question:
+        type: partial
+        path: @/plugins/mossadal/quiz/controllers/answer/_question_field.htm
+    name:
+        label: Answer
+    correct:
+        type: checkbox
+        label: Correct?
+    comment:
+        label: Comment
+        type: textarea
+        size: small
+

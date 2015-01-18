@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Quiz title
+        size: small
+        required: true
+    description:
+        label: Short description of this particular quiz.
+        type: textarea
+        size: small
+    comment:
+        label: Comment to be displayed after the quiz is finished. (Markdown syntax allowed.)
+        type: textarea
+        language: medium

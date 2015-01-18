@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Question
+
+# Model Form Field configuration
+form: $/mossadal/quiz/models/question/fields.yaml
+
+# Model Class name
+modelClass: Mossadal\Quiz\Models\Question
+
+# Default redirect location
+defaultRedirect: mossadal/quiz/question
+
+# Create page
+create:
+    title: Create Question
+    redirect: mossadal/quiz/question/update/:id
+    redirectClose: mossadal/quiz/question
+
+# Update page
+update:
+    title: Edit Question
+    redirect: mossadal/quiz/question
+    redirectClose: mossadal/quiz/question
+
+# Preview page
+preview:
+    title: Preview Question
