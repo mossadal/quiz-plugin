@@ -28,9 +28,14 @@ class Question extends ComponentBase
         $quiz = QuizModel::find($id);
         $questions = $quiz->questions;
 
-        if ($question_id == 'random') return $questions[array_rand($questions)];
+        if ($question_id == 'random') {
+            $questions = $questions->shuffle();
+            $q_id = 0;
+        }
+        else $q_id = $question_id-1;
 
-        $q = $questions[$question_id-1];
+        $q = $questions[$q_id];
+
         return $q;
     }
 

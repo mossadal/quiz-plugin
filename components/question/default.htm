@@ -1,5 +1,10 @@
 
 <h2>{{__SELF__.question.name}}</h2>
+
+<p>
+{{__SELF__.question.comment | md }}
+</p>
+
 {% for answer in __SELF__.question.answers.shuffle() %}
     <a
         class="btn btn-md btn-info btn-block"
@@ -33,7 +38,8 @@ href="/question/{{ id }}/{{question.next}}">
 function updateButtons(data, el)
 {
     el.removeClass('btn-info');
-    if (data.answer_correct) {
+
+    if (data.answer_correct == '1') {
         el.addClass('btn-success');
         $('#next-question').fadeIn();
     } else {
