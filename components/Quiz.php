@@ -1,7 +1,7 @@
 <?php namespace Mossadal\Quiz\Components;
 
 use Cms\Classes\ComponentBase;
-use Mossadal\Quiz\models\quiz as QuizModel;
+use Mossadal\Quiz\models\Quiz as QuizModel;
 
 class Quiz extends ComponentBase
 {
