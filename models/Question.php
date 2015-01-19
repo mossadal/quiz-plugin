@@ -1,8 +1,7 @@
 <?php namespace Mossadal\Quiz\Models;
 
-use Quiz;
 use Model;
-use Mossadal\Quiz\Classes\MathjaxMarkdownFormatter;
+use October\Rain\Support\Markdown;
 
 /**
  * Question Model
@@ -44,7 +43,7 @@ class Question extends Model
 
     public function beforeSave()
     {
-        $this->name_html = MathjaxMarkdownFormatter::Format($this->name);
-        $this->comment_html = MathjaxMarkdownFormatter::Format($this->comment);
+        $this->name_html = Markdown::parse($this->name);
+        $this->comment_html = Markdown::parse($this->comment);
     }
 }
