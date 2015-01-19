@@ -23,19 +23,18 @@ class Question extends ComponentBase
     public function question()
     {
         $id = $this->property('id');
+
         $question_id = $this->property('question');
 
         $quiz = QuizModel::find($id);
         $questions = $quiz->questions;
 
         if ($question_id == 'random') {
-            $questions = $questions->shuffle();
-            $q_id = 0;
+            $q_id = rand(0, count($questions)-1);
         }
         else $q_id = $question_id-1;
 
         $q = $questions[$q_id];
-
         return $q;
     }
 
