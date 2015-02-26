@@ -5,8 +5,12 @@
 fields:
     name:
         label: Question
+        type: textarea
+        language: small
     comment:
         label: Comment
+        type: textarea
+        language: medium
     quiz:
         type: relation
         commentAbove: Place question under which quiz?
